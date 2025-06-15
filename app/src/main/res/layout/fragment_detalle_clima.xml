@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-
+    android:background="@color/white"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/mainContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="visible"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
+            android:layout_alignParentStart="true"
             android:src="@drawable/menu_points" />
-
 
         <LinearLayout
             android:id="@+id/addressContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -34,8 +37,7 @@
                 android:id="@+id/textCiudad"
                 android:layout_width="wrap_content"
                 android:layout_height="43dp"
-                android:layout_marginTop="64dp"
-                android:text="KARACHI"
+                android:text="BANANI"
                 android:textSize="24sp" />
 
             <TextView
@@ -51,7 +53,7 @@
             android:id="@+id/overviewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/addressContainer"
+            android:layout_below="@id/addressContainer"
             android:layout_marginTop="32dp"
             android:orientation="vertical">
 
@@ -92,17 +94,14 @@
                     android:layout_marginTop="16dp"
                     android:layout_gravity="center"
                     android:src="@drawable/outline_line"/>
-
             </LinearLayout>
-
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/detailsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/overviewContainer"
+            android:layout_below="@id/overviewContainer"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="16dp"
@@ -232,7 +231,6 @@
                 android:layout_height="10dp" />
 
         </LinearLayout>
-
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

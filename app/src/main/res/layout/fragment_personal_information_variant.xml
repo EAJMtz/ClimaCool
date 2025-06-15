@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,132 +10,134 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="24dp">
 
+        <!-- Bienvenida -->
         <TextView
             android:id="@+id/textview_bienvenida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="32dp"
             android:text="Bienvenid@"
-            app:layout_constraintBottom_toTopOf="@+id/til_nombre"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp" />
 
+        <!-- Nombre -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_nombre"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Nombre:"
             app:layout_constraintTop_toBottomOf="@id/textview_bienvenida"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_nombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Tu nombre" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Campo Apellidos -->
+        <!-- Apellidos -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_apellidos"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Apellidos:"
             app:layout_constraintTop_toBottomOf="@id/til_nombre"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_apellidos"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Campo Nombre Usuario -->
+        <!-- Usuario -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_usuario"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario:"
             app:layout_constraintTop_toBottomOf="@id/til_apellidos"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_usuario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Campo Fecha Nacimiento -->
+        <!-- Fecha de Nacimiento -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_fecha"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Fecha de Nacimiento:"
             app:layout_constraintTop_toBottomOf="@id/til_usuario"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_fecha"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="date" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- CheckBox Codigo -->
+        <!-- CheckBox Código -->
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/codigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:layout_marginStart="16dp"
             android:text="Tengo código de referido"
+            app:layout_constraintTop_toBottomOf="@id/til_fecha"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/til_fecha" />
+            android:layout_marginTop="18dp" />
 
-        <!-- Campo Ingresar codigo -->
+        <!-- Código -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/text_codigo"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Código:"
             app:layout_constraintTop_toBottomOf="@id/codigo"
-            android:layout_marginTop="18dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/In_codigo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Boton Continuar -->
+        <!-- Botón -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_boton"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:text="Continuar"
-            android:backgroundTint="@color/cian"
             android:textColor="@android:color/black"
+            android:backgroundTint="@color/cian"
             app:layout_constraintTop_toBottomOf="@id/text_codigo"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
-
-        </com.google.android.material.button.MaterialButton>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
