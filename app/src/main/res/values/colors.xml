@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="green">#056105</color>
+    <color name="blue">#005A9C</color>
+    <color name="red">#B80707</color>
+    <color name="magenta">#FF00FF </color>
+    <color name="amarillo">#FFFF00 </color>
+    <color name="cian">#00FFFF</color>
+<color name="nose">#B0B0B0</color>
 </resources>

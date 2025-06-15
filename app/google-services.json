@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "775706869137",
+    "project_id": "climacool-cce9c",
+    "storage_bucket": "climacool-cce9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775706869137:android:156ba75c8975afc9ef2e30",
+        "android_client_info": {
+          "package_name": "com.example.climacool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkFFDJ2bc420AqPRybjibbU1ULhwJjYHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
